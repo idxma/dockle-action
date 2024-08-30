@@ -31,6 +31,7 @@ jobs:
     - name: Install Dockle
       run: |
         curl -sfL https://raw.githubusercontent.com/goodwithtech/dockle/master/install.sh | sh
+        sudo mv dockle /usr/local/bin/
 
     - name: Run Dockle scan
-      run: ./dockle -f json your-docker-image:latest
+      run: dockle -f json your-docker-image:latest
